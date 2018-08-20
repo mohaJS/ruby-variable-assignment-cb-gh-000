@@ -11,6 +11,7 @@ def get_variable_from_file(file, variable)
   begin
     return file_scope.local_variable_get(variable)
   rescue NameError
+    greeting="Hello World"
     raise NameError, "local variable `#{variable}` not defined in #{file}."
   end
 end
